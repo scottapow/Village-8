@@ -71,6 +71,7 @@ body {
     background-color: #46464A;
     max-width: 100%;
     height: 165px;
+    background-size: cover;
 }
 
 .title {
@@ -106,8 +107,21 @@ body {
     border-right: 1px solid #46464A;
 }
 
+#twitterLogo, #facebookLogo {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    clear: both;
+    bottom: 3px;
+}
 
+#twitterLogo {
+    left: 39px;
+}
 
+#facebookLogo {
+    left: 3px;
+}
 
 
 
