@@ -1,22 +1,55 @@
 
 
 .slick-slide {
-	width: 250px;
-	height: 400px;
+	width: 540px;
+	height: 540px;
 }
 
+.page-header {
+	text-align: left;
+	margin: 0 0 20px;
+}
 
+.page-header h1 {
+	font-size: 3em;
+}
 
+.page-header > h1 small {
+	font-size: .4em;
+	display: block;
+}
 
+.navbar-logo {
+	max-height: 46px;
+	display: inline;
+}
 
+.navbar-logo:nth-child(2) {
+	float:right;
+	padding-left: 15px;
+}
+.navbar-logo:nth-child(1) {
+	float:left;
+}
 
+.navbar-brand {
+	padding: 7px 0 7px 14%;
+}
 
+.navbar-toggle {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
 
-
-
-
-
-
+@media (max-width: 767px) {
+	.navbar-header {
+		height: 60px;
+	}
+	.navbar-toggle {
+		margin-top: 13px;
+		margin-bottom: 13px;
+	}
+}
 
 
 
