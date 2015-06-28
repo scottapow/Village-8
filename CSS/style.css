@@ -28,6 +28,11 @@ body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 4px;
 }
 
+.nav li a {
+	font-size: 1.3em;
+	letter-spacing: 
+}
+
 @media (max-width: 767px) {
 	.navbar-header {
 		height: 60px;
