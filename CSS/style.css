@@ -1,9 +1,11 @@
 body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-	font-family: "Dosis",Helvetica,Arial,sans-serif;
+	font-family: "Oxygen",Helvetica,Arial,sans-serif;
 }
 
-.slick-slide img {
-	width: 100%;
+
+
+body .main-header {
+	background-color: #fff;
 }
 
 .navbar-logo {
@@ -29,8 +31,9 @@ body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 }
 
 .nav li a {
+	color: #33312A;
 	font-size: 1.3em;
-	letter-spacing: 
+	letter-spacing: 1.5px;
 }
 
 @media (max-width: 767px) {
@@ -41,6 +44,23 @@ body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 		margin-top: 13px;
 		margin-bottom: 13px;
 	}
+	.panel-title {
+		font-size: 1.5em;
+	}
+}
+
+body > header > div > h2 {
+	color: #39273D;
+}
+
+/*@media (min-width: 1200px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 768px) {}*/
+
+body > div.container.center.hidden-xs.well.well-lg.slick-initialized.slick-slider {
+
 }
 
 .main-header {
@@ -71,13 +91,73 @@ body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 	margin-left: 18%;
 }
 
+body > div.container.center.hidden-xs.well.well-lg.slick-initialized.slick-slider {
+	width:100%;
+	padding: 24px 0;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #e3e3e3;
+	border-top: 1px solid #e3e3e3;  
+}
+
+.well-lg {
+	border-radius: 0;
+}
+
+#hrtop {
+	margin-top: 0px;
+}
+
+.slick-slide img {
+	width: 100%;
+}
+
+.slick-slider {
+	margin-bottom: 0;
+}
+
+.slick-dots {
+	bottom: -10px;
+}
+
+@media (min-width: 768px) {
+	.col-sm-9.synops.panel.panel-default {
+	margin-right: 2%;
+	width: 73%;
+	}
+	.panel-title {
+		font-size: 2em;
+		font-weight: 700;
+	}
+}
+
+.panel-default>.panel-heading {
+	margin: 0 -15px;
+}
+
 .synops .container-fluid {
 	margin-top: 25px;
 }
 
-.synops div p {
-	font-size: 1.5em;
+.media h3 {
+	font-weight: 700;
+	font-size: 1.8em;
 }
+
+.media h4 {
+	font-weight: 700;
+}
+
+.meadia p {
+	font-weight: 300;
+	font-size: 1.2em;
+}
+
+div.media-left > a > img {
+	width: 160px;
+	height: 250px;
+}
+
 
 
 
