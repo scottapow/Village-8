@@ -86,24 +86,17 @@ body > div.container.center.hidden-xs.well.well-lg.slick-initialized.slick-slide
 }
 
 .main-header div > h2 {
-	margin-left: 13%;
+	text-align: center;
 }
-
 
 #hrtop {
 	margin-top: 0px;
 }
 
-.slick-container:before, .slick-container:after {
-	content: "";
-	top: 0;
-	left: 0;
-	z-index: 2;
-	background: linear-gradient(to right, black, transparent 15%),
-							linear-gradient(to left, black, transparent 15%),
-							black;
+.page-header h1 {
+	text-align: center;
+	font-weight: 700;
 }
-
 
 .slick-slide a img {
 	height: 100%;
@@ -136,11 +129,17 @@ body > div.container.center.hidden-xs.well.well-lg.slick-initialized.slick-slide
 	div.slider-nav > div > .slick-track {
 		height: 180px;
 	}
+	.main-header div > h2 {
+		font-size: 26px;
+	}
 }
 
 @media (min-width: 992px) {
 	div.slider-nav > div > .slick-track {
 		height: 244px;
+	}
+	.main-header div > h2 {
+		font-size: 30px;
 	}
 }
 
