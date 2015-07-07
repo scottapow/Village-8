@@ -2,12 +2,11 @@
 // Movie Synops Content //
 
   // Store IMDB id's
-// var $movie1ID = $('.synops div:nth-child(1)').attr('id');
-// var $movie2ID = $('.synops div:nth-child(2)').attr('id');
-// var $movie3ID = $('.synops div:nth-child(3)').attr('id');
-// var $movie4ID = $('.synops div:nth-child(4)').attr('id');
-// var $movie5ID = $('.synops div:nth-child(5)').attr('id');
-
+// var $movie1ID = $('#tt0369610').attr('id');
+// var $movie2ID = $('#tt1392190').attr('id');
+// var $movie3ID = $('#tt2126355').attr('id');
+// var $movie4ID = $('#tt3079380').attr('id');
+// var $movie5ID = $('#tt2637276').attr('id');
 // function getMovie(imdbid) {
 //   $.ajax({    
 //     data:  {
@@ -58,37 +57,24 @@
 
 /* * * * * Slick Carousel * * * * */
 
-$('.center').slick({
+$('.slider-nav').slick({
   centerMode: true,
+  asNavFor: ".slider-for",
+  focusOnSelect: true,
+  arrows: "false",
   touchMove: true,
-  centerPadding: '110px',
   accessibility: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  dots: true,
+  infinite: true,
+  swipeToSlide: true
+});
+ $('.slider-for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  infinite:true,
-  dots: true,
-  autoplay: true,
-  autoplaySpeed: 3500,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: true,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1,
-        variableWidth: true
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1,
-        variableWidth: true
-      }
-    }
-  ]
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
 });
+

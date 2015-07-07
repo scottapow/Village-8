@@ -76,48 +76,80 @@ body > div.container.center.hidden-xs.well.well-lg.slick-initialized.slick-slide
 }
 
 #desktop-title-apex {
-	margin-left: 18%;
+	margin-left: 8%;
 	max-width: 28%;
-	z-index: 1;
 }
 
 #desktop-title-theatres {
-	margin-right: 28%;
-	max-width: 25.6%;
-	z-index: 2;
+	margin-right: 38%;
+	max-width: 25.4%;
 }
 
 .main-header div > h2 {
-	margin-left: 18%;
+	margin-left: 13%;
 }
 
-body > div.container.center.hidden-xs.well.well-lg.slick-initialized.slick-slider {
-	width:100%;
-	padding: 24px 0;
-	border-left: none;
-	border-right: none;
-	border-bottom: 1px solid #e3e3e3;
-	border-top: 1px solid #e3e3e3;  
-}
-
-.well-lg {
-	border-radius: 0;
-}
 
 #hrtop {
 	margin-top: 0px;
 }
 
+.gradient-wrapper {
+	margin: auto 0;
+	z-index: 1;
+	background: linear-gradient(to right, black, transparent 15%),
+							linear-gradient(to left, black, transparent 15%);
+}
+
+body > div.gradient-wrapper > div {
+	z-index: 2;
+}
+
+@media (min-width: 1200px) {
+	.slider-nav.slick-track {
+		height: 580px;
+	}
+}
+
+@media (min-width: 992px) {
+	.slider-nav.slick-track {
+		height: 430px;
+	}
+}
+
+@media (min-width: 768px) {
+ 	.slider-nav.slick-track {
+		height: 330px;
+	}
+}
+
+.slick-track div a {
+	height: 100%;
+}
+
 .slick-slide img {
+	display: block;
 	width: 100%;
+	height: 100%;
 }
 
-.slick-slider {
+.slider-nav div div div > a {
+	overflow: hidden;
+}
+
+.slider-nav.slick-slider {
 	margin-bottom: 0;
+
 }
 
-.slick-dots {
-	bottom: -10px;
+.slider-desc p {
+	background-color: blue;
+}
+
+.slider-img div img {
+	display: block;
+	height: auto;
+	width: auto;
 }
 
 @media (min-width: 768px) {
