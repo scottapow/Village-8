@@ -61,20 +61,23 @@ $('.slider-nav').slick({
   centerMode: true,
   asNavFor: ".slider-for",
   focusOnSelect: true,
-  arrows: "false",
+  arrows: false,
   touchMove: true,
   accessibility: true,
   slidesToShow: 5,
   slidesToScroll: 1,
   dots: true,
   infinite: true,
-  swipeToSlide: true
+  swipeToSlide: true,
 });
  $('.slider-for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
+  infinite: true,
   arrows: false,
+  asNavFor: '.slider-nav',
   fade: true,
-  asNavFor: '.slider-nav'
+  speed: 200,
+  cssEase: 'linear',
 });
 
