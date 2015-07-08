@@ -4,10 +4,6 @@ body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 
 
 
-body .main-header {
-	background-color: #fff;
-}
-
 .navbar-logo {
 	max-height: 46px;
 	display: inline;
@@ -98,7 +94,7 @@ body > div.container.center.hidden-xs.well.well-lg.slick-initialized.slick-slide
 	font-weight: 700;
 }
 
-.slick-slide a img {
+.slick-nav div div .slick-slide img {
 	height: 100%;
 	width: auto;
 	border-right: 4px black solid;
@@ -132,6 +128,9 @@ body > div.container.center.hidden-xs.well.well-lg.slick-initialized.slick-slide
 	.main-header div > h2 {
 		font-size: 26px;
 	}
+	.slider-desc.panel {
+		height: 198.438px;
+	}
 }
 
 @media (min-width: 992px) {
@@ -140,6 +139,9 @@ body > div.container.center.hidden-xs.well.well-lg.slick-initialized.slick-slide
 	}
 	.main-header div > h2 {
 		font-size: 30px;
+	}
+	.slider-desc.panel {
+		height: 260.313px;
 	}
 }
 
@@ -150,6 +152,9 @@ body > div.container.center.hidden-xs.well.well-lg.slick-initialized.slick-slide
 	.slick-slide a img {
 		border-right-width: 6px;
 	}
+	.slider-desc.panel {
+		height: 316.563px;
+	}
 }
 
 div.slick-slide:not(.slick-center) {
@@ -158,13 +163,31 @@ div.slick-slide:not(.slick-center) {
 
 .slider-nav.slick-slider {
 	margin-bottom: 0;
-
 }
 
-.slider-desc p {
-	background-color: blue;
+.slider-for {
+	margin-top: 20px;
 }
 
+.slider-desc .panel-body {
+	padding: 0 7px 5px 2px;
+}
+
+.slider-desc .panel-body > h4 {
+	clear: both;
+}
+
+#genre-rating .text-left {
+	float: left;
+}
+
+#genre-rating .text-right {
+	float: right;
+}
+
+.text-muted {
+	line-height: 1.5;
+}
 
 @media (min-width: 768px) {
 	.col-sm-9.synops.panel.panel-default {
