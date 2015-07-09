@@ -77,7 +77,7 @@ $('.slider-nav').slick({
   arrows: false,
   asNavFor: '.slider-nav',
   fade: true,
-  speed: 200,
+  speed: 650,
   cssEase: 'linear',
 });
 

@@ -94,7 +94,7 @@ body > div.container.center.hidden-xs.well.well-lg.slick-initialized.slick-slide
 	font-weight: 700;
 }
 
-.slick-nav div div .slick-slide img {
+.slider-nav div div .slick-slide img {
 	height: 100%;
 	width: auto;
 	border-right: 4px black solid;
@@ -149,7 +149,7 @@ body > div.container.center.hidden-xs.well.well-lg.slick-initialized.slick-slide
 	div.slider-nav > div > .slick-track {
 		height: 304px;
 	}
-	.slick-slide a img {
+	.slick-slide img {
 		border-right-width: 6px;
 	}
 	.slider-desc.panel {
