@@ -74,10 +74,27 @@ $('.slider-nav').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   infinite: true,
-  arrows: false,
+  arrows: true,
   asNavFor: '.slider-nav',
   fade: true,
   speed: 650,
   cssEase: 'linear',
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        dots: true,
+        arrows: true
+      }
+    },
+    {
+      breakpoint: 6000,
+      settings: {
+        dots: false,
+        arrows: false
+      }
+    }
+  ]
 });
 
