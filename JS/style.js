@@ -79,22 +79,64 @@ $('.slider-nav').slick({
   fade: true,
   speed: 650,
   cssEase: 'linear',
-  dots: true,
+  dots: false,
   responsive: [
     {
       breakpoint: 767,
       settings: {
-        dots: true,
-        arrows: true
+        arrows: true,
+
       }
     },
     {
       breakpoint: 6000,
       settings: {
-        dots: false,
-        arrows: false
+        arrows: false,
+        appendArrows: "$('.thumbnail')"
       }
     }
   ]
 });
+
+
+/* * * * * Slick Arrows Position * * * * */
+// Probably very inefficient but works for now.
+
+
+$(window).on("load resize", function() {
+  var prev = $('.slick-prev');
+  var next = $('.slick-next');
+  var thumb = $('.thumbnail > img');
+  var thumbHeight = thumb.height();
+  var notWrapped = (thumbHeight / 2.3);
+  var wrapped = (thumbHeight / 2.6);
+  if (thumbHeight < 242.4) {
+    prev.css("top", wrapped);
+    next.css("top", wrapped);
+  } else {
+    prev.css("top", notWrapped);
+    next.css("top", notWrapped);
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
