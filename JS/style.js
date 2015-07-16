@@ -77,7 +77,8 @@ $('.slider-nav').slick({
   arrows: true,
   asNavFor: '.slider-nav',
   fade: true,
-  speed: 650,
+  lazyLoad: 'onDemand',
+  speed: 850,
   cssEase: 'linear',
   dots: false,
   responsive: [
@@ -119,6 +120,10 @@ $(window).on("load resize", function() {
   }
 });
 
+/* * * * * Button Appendation * * * * */
+
+
+$('#info-buttons').appendTo('.slider-desc .panel-body');
 
 
 

@@ -40,7 +40,11 @@ body {
 }
 
 
-
+@media (max-width: 365px) {
+	.navbar-brand {
+		padding-left: 2%;
+	}
+}
 
 @media (max-width: 767px) {
 	.navbar-header {
@@ -59,7 +63,9 @@ body {
   	background-image: -webkit-gradient(linear,left top,left bottom,from(#666),to(#4c4c4c));
   	background-image: linear-gradient(to bottom,#666 0,#4c4c4c 100%);
 	}
-
+	.slider-desc.panel {
+		height: 100%;
+	}
 }
 
 body > header > div > h2 {
@@ -178,6 +184,8 @@ div.panel.panel-default {
 		width: 84%;
 		margin: 0 auto;
 		padding-left: 0px;
+		border: 1px solid transparent;
+  	border-radius: 4px;
 	}
 	div.panel-body {
 		padding: 8px 12px;
@@ -241,11 +249,7 @@ div.panel.panel-default {
 	.slider-img {
 		width: 585px;
 	}
-	div.panel-body {
-
-	}
 }
-
 
 
 div.slick-slide:not(.slick-center) {
@@ -267,6 +271,21 @@ div.slick-slide:not(.slick-center) {
 .text-muted {
 	line-height: 1.5;
 }
+
+div.slider-img-thumb {
+	background: linear-gradient(0deg, rgba(0,0,0,.8), rgba(0,0,0,.1) 45%);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+}
+
+.slider-thumbnail {
+	position: relative;
+	width: 100%;
+	height: auto;
+	display: block;
+	z-index: -1;
+}
+
 
 .slick-prev:before, .slick-next:before {
 	font-family: FontAwesome;
@@ -299,5 +318,10 @@ div.slick-slide:not(.slick-center) {
 	right: -5px;
 }
 
-
+#info-buttons {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-left: 0;
+	padding-right: 0;
+}
 
