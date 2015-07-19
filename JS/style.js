@@ -1,57 +1,7 @@
 
 
-// Movie Synops Content //
 
-  // Store IMDB id's
-// var $movie1ID = $('#tt0369610').attr('id');
-// var $movie2ID = $('#tt1392190').attr('id');
-// var $movie3ID = $('#tt2126355').attr('id');
-// var $movie4ID = $('#tt3079380').attr('id');
-// var $movie5ID = $('#tt2637276').attr('id');
-// function getMovie(imdbid) {
-//   $.ajax({    
-//     data:  {
-//       idIMDB: imdbid
-//     },
-//     method: 'GET',
-//     url:        'http://www.myapifilms.com/id?format=jsonp',
-//     dataType: "jsonp",
-//     success: function (response) {
-//       console.log(response);
-//       var imgSrc = response.urlPoster;
-//       $('#' + imdbid).html( 
-//         "<img src=\'" + imgSrc + "\' >" +
-//         "<h1>" + response.title + "</h1><br>" +
-//         "<p>" + response.plot + "</p>"
-//         );
-//       $('#' + imdbid + ' img').css({
-//         "display": "inline-block", 
-//         "float": "left",
-//         "width": "142px",
-//         "height": "226px",
-//         "margin-bottom": "40px",
-//         "padding-right": "10px" 
-//       });
-//       $('#' + imdbid + ' h1').css({
-//         "display": "inline-block", 
-//         "position": "relative",
-//         "margin-left": "10px"
-//       });
-//       $('#' + imdbid + ' > p').css({
-//         "display": "inline",
-//         "position": "relative", 
-//         "margin-top": "10px",
-//         "clear": "right"
-//       });
-//     }
-//   }); 
-// }
 
-// getMovie($movie1ID);
-// getMovie($movie2ID);
-// getMovie($movie3ID);
-// getMovie($movie4ID);
-// getMovie($movie5ID);
 
 //Token: 04952d4f-cb8c-47f2-943e-a01e19bcfed6
 // URL: http://www.myapifilms.com/imdb/inTheaters?format=JSON&lang=en-us&token=4952d4f-cb8c-47f2-943e-a01e19bcfed6
@@ -108,7 +58,7 @@ $('.slider-nav').slick({
 $(window).on("load resize", function() {
   var prev = $('.slick-prev');
   var next = $('.slick-next');
-  var thumb = $('.thumbnail > img');
+  var thumb = $('.slider-img-thumb > img');
   var thumbHeight = thumb.height();
   var notWrapped = (thumbHeight / 2.3);
   var wrapped = (thumbHeight / 2.6);
@@ -127,10 +77,78 @@ $(window).on("load resize", function() {
 $('#info-buttons').appendTo('.slider-desc .panel-body');
 
 
-//on hover
-//toggle
-//hide
 
+
+var getMovie = function() {
+  var $movieID = $('.row .slick-active').attr('id');
+  $.ajax({    
+    data:  {
+      idIMDB: $movieID
+    },
+    method: 'GET',
+    url:        'http://www.myapifilms.com/id?format=jsonp',
+    dataType: "jsonp",
+    success: function (response) {
+      var directors = response.directors[0].name;
+      var rd = response.releaseDate.split("");
+      var rdMonth = rd[4]+rd[5];
+      var rdDay = rd[6]+rd[7];
+      
+      if (rdMonth === "01") {
+        rdMonth = "January";
+      } else if (rdMonth === "02") {
+        rdMonth = "February";
+      } else if (rdMonth === "03") {
+        rdMonth = "March";
+      } else if (rdMonth === "04") {
+        rdMonth = "April";
+      } else if (rdMonth === "05") {
+        rdMonth = "May";
+      } else if (rdMonth === "06") {
+        rdMonth = "June";
+      } else if (rdMonth === "07") {
+        rdMonth = "July";
+      } else if (rdMonth === "08") {
+        rdMonth = "August";
+      } else if (rdMonth === "09") {
+        rdMonth = "September";
+      } else if (rdMonth === "10") {
+        rdMonth = "October";
+      } else if (rdMonth === "11") {
+        rdMonth = "November";
+      } else {
+        rdMonth = "December";
+      };
+
+      
+      var releaseDate = rdMonth + " " + rdDay;
+      var rating = response.rating;
+      var year = response.year;
+      if (response.writers.length === 2) {
+        responseContent = ("<h3>Director:<small>&nbsp; "+directors+"</small></h3><h3>Writers:<small>&nbsp; "+response.writers[0].name+", "+response.writers[1].name+"</small></h3><h3>Release Date:<small>&nbsp; "+releaseDate+"</small></h3><h3>IMDB Rating:<small>&nbsp; "+rating+"</small></h3><h3>Year:<small>&nbsp; "+year+"</small></h3>");
+      } else {
+        responseContent = ("<h3>Director:<small>&nbsp; "+directors+"</small></h3><h3>Writers:<small>&nbsp; "+response.writers[0].name+"</small></h3><h3>Release Date:<small>&nbsp; "+releaseDate+"</small></h3><h3>IMDB Rating:<small>&nbsp; "+rating+"</small></h3><h3>Year:<small>&nbsp; "+year+"</small></h3>");
+      };
+
+      $('.modal-body').html(responseContent);
+
+
+    }
+  });
+};
+
+$('.info-button').on('click', function () {
+  getMovie();
+}).on('focusout', function() {
+  $('.modal-body').html("<h2>Loading...</h2>");
+});
+
+
+
+// $(".info-button").on("click", function () {
+//   getMovie();
+// });
+// // getMovie();
 
 
 
