@@ -87,11 +87,9 @@ body > header > div > h2 {
 	color: #171717;
 	text-shadow: 1px 1px #f6f6f6,
 							 3px 3px rgba(0, 0, 0, .18);
-}
-
-div.page-header > h1 {
 	margin: 0 auto 12px;
 }
+
 
 .slider-nav div div .slick-slide img {
 	height: 100%;
@@ -205,6 +203,9 @@ div.slick-slide:not(.slick-center) {
 	padding-left: 2px;
 }
 
+body > div.navbar.transparent.navbar-inverse.navbar-fixed-top {
+	opacity: 1;
+}
 .slider-thumbnail {
 	position: relative;
 	width: 100%;
@@ -261,7 +262,16 @@ div.slick-slide:not(.slick-center) {
 	font-size: 80%;
 }
 
-
+.row.slick-slide.slick-active::after {
+	content: "Showtimes and Pricing";
+	text-align: center;
+	font-weight: 200;
+	font-size: 4em;
+	color: #171717;
+	text-shadow: 1px 1px #f6f6f6,
+							 3px 3px rgba(0, 0, 0, .18);
+	margin: -10px auto 12px;
+}
 
 
 

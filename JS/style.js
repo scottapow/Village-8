@@ -93,7 +93,6 @@ var getMovie = function() {
       var rd = response.releaseDate.split("");
       var rdMonth = rd[4]+rd[5];
       var rdDay = rd[6]+rd[7];
-      
       if (rdMonth === "01") {
         rdMonth = "January";
       } else if (rdMonth === "02") {
@@ -119,8 +118,6 @@ var getMovie = function() {
       } else {
         rdMonth = "December";
       };
-
-      
       var releaseDate = rdMonth + " " + rdDay;
       var rating = response.rating;
       var year = response.year;
