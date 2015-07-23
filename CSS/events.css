@@ -1,0 +1,8 @@
+.media-left a img {
+	width: auto;
+	height: 180px;
+}
+
+.media:first-child {
+	margin-top: 15px;
+}
