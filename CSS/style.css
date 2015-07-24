@@ -5,10 +5,12 @@ body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 body {
 	background-color: #F6F6F6;
 }
-.media-object .thumbnail {
-	width: 107px;
-	height: 158px;
+
+.lead {
+	margin-bottom: 0;
+	display: inline;
 }
+
 .text-dark-grey {
 	color: #343434;
 }
