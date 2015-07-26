@@ -43,6 +43,9 @@ div.slick-slide:not(.slick-center) {
 dt, dd {
 	text-align: center;
 }
+.form-control {
+	display: inline;
+}
 header {
 	margin-top: -10px;
 }
@@ -286,10 +289,17 @@ i {
 		clear: both;
 	}
 	.ui-accordion .ui-accordion-content {
-		padding-bottom: 0;
+		padding-bottom: 0
 	}
 	.navbar-header {
-		height: 60px;
+		height: 60px
+	}
+	.form-control {
+		width: 75%
+	}
+	button[type=submit] {
+    margin-left: 0;
+    margin-top:  5px
 	}
 }
 
@@ -319,6 +329,10 @@ i {
 	.ui-accordion .ui-accordion-content {
 		padding-bottom: 0;
 	}
+	button[type=submit] {
+    margin-left: 5px;
+    margin-top: -3px;
+	}
 }
 
 @media (min-width:700px) {
@@ -329,6 +343,9 @@ i {
 	}
 	.ui-accordion .ui-accordion-content {
 		padding-bottom: 21px;
+	}
+	.form-control {
+		width: 48%
 	}
 }
 
