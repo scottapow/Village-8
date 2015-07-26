@@ -67,10 +67,6 @@ i {
 .info-modal-body h3 small {
 	font-size: 80%;
 }
-.lead {
-	margin-bottom: 0;
-	display: inline;
-}
 .main-header {
 	padding-bottom: 0px;
 	background: linear-gradient(180deg, #f6f6f6, transparent 600%), linear-gradient(270deg, #f6f6f6, transparent 20%), #f6f6f6 url("../images/searchlights.svg") no-repeat right;
@@ -237,6 +233,9 @@ i {
 }
 .social-links {
 	font-size: 16px;
+}
+.tab {
+	text-indent: 20px;
 }
 #tabs h3 > small {
 	padding-left: 10px;
