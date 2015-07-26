@@ -1,553 +1,427 @@
-//colors
-$color_storm_dust_approx: #666;
-$color_gravel_approx: #4c4c4c;
-$color_masala_approx: #3c3c3c;
-$color_log_cabin_approx: #222;
-$color_black_haze_approx: #f6f6f6;
-$color_tuatara_approx: #343434;
-$color_desert_storm_approx: #f8f8f8;
-$color_mine_shaft_approx: #33312a;
-$color_blackcurrant_approx: #39273d;
-$color_hunter_green_approx: #171717;
-$color_alto_approx: #ddd;
-
-//fonts
-$font_0: 'Oxygen';
-$font_1: 'Helvetica';
-$font_2: 'Arial';
-$font_3: 'sans-serif';
-$font_4: 'FontAwesome';
-$font_5: 'Oxygen';
-$font_6: 'Helvetica';
-$font_7: 'Arial';
-$font_8: 'sans-serif';
-
-//urls
-$url_0: url('../images/searchlights.svg');
-
-//@extend-elements
-//original selectors
-//.slick-prev:before, .slick-next:before
-%extend_1 {
-  font-family: $font_4;
-  font-size: 100px;
-  line-height: 1;
-  color: $black_50;
+body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: "Oxygen",Helvetica,Arial,sans-serif;
 }
-
-//original selectors
-//.slick-next, .slick-prev
-%extend_2 {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-}
-
-
 body {
-  font-family: $font_0, $font_1, $font_2, $font_3;
-  background-color: $color_black_haze_approx;
-  > {
-    header > div > h2 {
-      color: $color_blackcurrant_approx;
+    background-color: #F6F6F6;
+    > header > div > h2 {
+        color: #39273D;
     }
-    div.navbar.transparent.navbar-inverse.navbar-fixed-top {
-      opacity: 1;
+    > div.navbar.transparent.navbar-inverse.navbar-fixed-top {
+        opacity: 1;
     }
-  }
-}
-.h1 {
-  font-family: $font_0, $font_1, $font_2, $font_3;
-}
-.h2 {
-  font-family: $font_0, $font_1, $font_2, $font_3;
-}
-.h3 {
-  font-family: $font_0, $font_1, $font_2, $font_3;
-}
-.h4 {
-  font-family: $font_0, $font_1, $font_2, $font_3;
-}
-.h5 {
-  font-family: $font_0, $font_1, $font_2, $font_3;
-}
-.h6 {
-  font-family: $font_0, $font_1, $font_2, $font_3;
-}
-h1 {
-  font-family: $font_0, $font_1, $font_2, $font_3;
-}
-h2 {
-  font-family: $font_0, $font_1, $font_2, $font_3;
-}
-h3 {
-  font-family: $font_0, $font_1, $font_2, $font_3;
-  &:focus {
-    outline: none;
-  }
-}
-h4 {
-  font-family: $font_0, $font_1, $font_2, $font_3;
-}
-h5 {
-  font-family: $font_0, $font_1, $font_2, $font_3;
-}
-h6 {
-  font-family: $font_0, $font_1, $font_2, $font_3;
 }
 .lead {
-  margin-bottom: 0;
-  display: inline;
+    margin-bottom: 0;
+    display: inline;
 }
 .text-dark-grey {
-  color: $color_tuatara_approx;
+    color: #343434;
 }
-.btn {
-  &:focus {
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus, a:focus, h3:focus {
     outline: none;
-  }
-  &:active {
-    &:focus {
-      outline: none;
-    }
-    &.focus {
-      outline: none;
-    }
-  }
-  &.active {
-    &:focus {
-      outline: none;
-    }
-    &.focus {
-      outline: none;
-    }
-  }
-  &.focus {
-    outline: none;
-  }
 }
 header {
-  margin-top: -10px;
+    margin-top: -10px;
 }
 .navbar-logo {
-  max-height: 46px;
-  display: inline;
-  color: $color_desert_storm_approx;
-  &:nth-child(2) {
-    float: right;
-    padding-left: 15px;
-  }
-  &:nth-child(1) {
-    float: left;
-  }
+    max-height: 46px;
+    display: inline;
+    color: #f8f8f8;
+    &:nth-child(2) {
+        float: right;
+        padding-left: 15px;
+    }
+    &:nth-child(1) {
+        float: left;
+    }
 }
 .navbar-brand {
-  padding: 7px 0 7px 14%;
+    padding: 7px 0 7px 14%;
 }
 .navbar-toggle {
-  margin-top: 4px;
-  margin-bottom: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
-#desktop-title-apex {
-  opacity: .8;
-  margin-left: 8%;
-  max-width: 28%;
+.nav li a {
+    color: #33312A;
+    font-size: 1.3em;
+    letter-spacing: 1.1px;
 }
-#desktop-title-theatres {
-  opacity: .8;
-  margin-right: 38%;
-  max-width: 25.4%;
+#desktop-title-apex, #desktop-title-theatres {
+    opacity: .8;
 }
 .main-header {
-  padding-bottom: 0;
-  background: linear-gradient(180deg, $color_black_haze_approx, transparent 600%), linear-gradient(270deg, $color_black_haze_approx, transparent 20%), $color_black_haze_approx $url_0 no-repeat right;
-  background-size: auto;
-  div > h2 {
-    text-align: center;
-  }
+    padding-bottom: 0px;
+    background: linear-gradient(180deg, #f6f6f6, transparent 600%),
+                            linear-gradient(270deg, #f6f6f6, transparent 20%),
+                            #f6f6f6 url("..;
+    background-size: auto;
+    div > h2 {
+        text-align: center;
+    }
+    /*//////////MEDIAQ//////////*/
+    div > h2 {
+        font-size: 26px;
+    }
+    div > h2 {
+        font-size: 30px;
+    }
+}
+#desktop-title-apex {
+    margin-left: 8%;
+    max-width: 28%;
+}
+#desktop-title-theatres {
+    margin-right: 38%;
+    max-width: 25.4%;
 }
 #hrtop {
-  margin-top: 0;
+    margin-top: 0px;
 }
 .shadowed-page-header {
-  border-bottom: none;
-  margin: 34px 0;
-  h1 {
+    border-bottom: none;
+    margin: 34px 0 34px;
+    h1 {
+        text-align: center;
+        font-weight: 200;
+        font-size: 4em;
+        color: #171717;
+        text-shadow: 1px 1px #f6f6f6,
+                             3px 3px rgba(0, 0, 0, .18);
+        margin: 0 auto 12px;
+    }
+}
+.slider-nav div div .slick-slide img {
+    height: 100%;
+    width: auto;
+    border-right: 4px black solid;
+}
+.slider-nav {
+    background-color: black;
+    border-top: 4px black solid;
+    border-bottom: 4px black solid;
+    &.slick-slider {
+        margin-bottom: 0;
+    }
+}
+.slick-container {
+    z-index: 1;
+    border-top: 4px black dotted;
+    border-bottom: 4px black dotted;
+    padding-left: 0;
+    padding-right: 0;
+}
+.slick-film-border {
+    border-top: 4px black solid;
+    border-bottom: 4px black solid;
+    padding-left: 0;
+    padding-right: 0;
+}
+.slider-desc div > h4 {
+    font-weight: 600;
+}
+.slider-desc div h4 > small {
+    font-weight: 200;
+    letter-spacing: .72px;
+    color: #4c4c4c;
+    font-size: 88%;
+}
+div.panel-body {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+div.panel.panel-default {
+    padding: 0;
+}
+.slick-prev:before, .slick-next:before {
+    color: #222;
+}
+div.slick-slide:not(.slick-center) {
+    opacity: .7;
+}
+.slider-for {
+    margin-top: 20px;
+}
+.slider-desc .panel-body {
+    padding: auto 4px;
+}
+.text-muted {
+    line-height: 1.5;
+}
+.slider-img-thumb {
+    background: linear-gradient(0deg, rgba(0,0,0,.65), rgba(0,0,0,.10) 30%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    transition: background 2s, transform 2s;
+    &:hover {
+        background: linear-gradient(0deg, rgba(0,0,0,.65), rgba(0,0,0,.10) 30%),
+                            rgba(0, 0, 0, 0.55);
+    }
+    a h2 {
+        font-size: 32px;
+        transition: font-size .4s;
+        margin-bottom: 0;
+        &:hover {
+            font-size: 34px;
+        }
+        &:hover {
+            font-size: 26px;
+        }
+        &:hover {
+            font-size: 34px;
+        }
+    }
+    a h2 {
+        font-size: 24px;
+    }
+    a h2 {
+        font-size: 32px;
+    }
+}
+.slider-trailer {
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+    h2 {
+        color: white;
+        letter-spacing: -1px;
+    }
+    .glyphicon {
+        padding-left: 2px;
+    }
+}
+.slider-thumbnail {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: -1;
+}
+.slick-prev:before, .slick-next:before {
+    font-family: FontAwesome;
+    font-size: 100px;
+    line-height: 1;
+    color: rgba(0,0,0, .5);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-prev:before {
+    content: " ";
+}
+.slick-next:before {
+    content: " ";
+}
+.slick-next, .slick-prev {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    &:before {
+        display: none;
+    }
+}
+.slick-prev {
+    left: -5px;
+}
+.slick-next {
+    right: -5px;
+}
+#info-buttons {
+    position: absolute;
+    right: 0;
+    bottom: 2%;
+    font-family: "Oxygen",Helvetica,Arial,sans-serif;
+}
+.info-modal-body {
+    padding-top: 0;
+    h3 {
+        font-weight: 700;
+        small {
+            font-size: 80%;
+        }
+    }
+}
+.row.slick-slide.slick-active::after {
+    content: "Showtimes and Pricing";
     text-align: center;
     font-weight: 200;
     font-size: 4em;
-    color: $color_hunter_green_approx;
-    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    text-shadow: 1px 1px $color_black_haze_approx, 3px 3px $black_18;
-    margin: 0 auto 12px;
-  }
-}
-.slider-nav {
-  background-color: $black;
-  border-top: 4px $black solid;
-  border-bottom: 4px $black solid;
-  &.slick-slider {
-    margin-bottom: 0;
-  }
-  div div .slick-slide img {
-    height: 100%;
-    width: auto;
-    border-right: 4px $black solid;
-  }
-}
-.slick-container {
-  z-index: 1;
-  border-top: 4px $black dotted;
-  border-bottom: 4px $black dotted;
-  padding-left: 0;
-  padding-right: 0;
-}
-.slick-film-border {
-  border-top: 4px $black solid;
-  border-bottom: 4px $black solid;
-  padding-left: 0;
-  padding-right: 0;
-}
-.slider-desc {
-  div {
-    > h4 {
-      font-weight: 600;
-    }
-    h4 > small {
-      font-weight: 200;
-      letter-spacing: .72px;
-      color: $color_gravel_approx;
-      font-size: 88%;
-    }
-  }
-  .panel-body {
-    padding: auto 4px;
-  }
-}
-div {
-  &.panel-body {
-    padding-top: 6px;
-    padding-bottom: 6px;
-  }
-  &.panel.panel-default {
-    padding: 0;
-  }
-  &.slick-slide:not(.slick-center) {
-    opacity: .7;
-  }
-}
-.slick-prev {
-  @extend %extend_2;
-  left: -5px;
-  &:before {
-    @extend %extend_1;
-    content: "\f053";
-  }
-}
-.slick-next {
-  @extend %extend_2;
-  right: -5px;
-  &:before {
-    @extend %extend_1;
-    content: "\f054";
-  }
-}
-.slider-for {
-  margin-top: 20px;
-}
-.text-muted {
-  line-height: 1.5;
-}
-.slider-img-thumb {
-  background: linear-gradient(0deg, $black_65, $black_10 30%);
-  background-position: center center;
-  background-repeat: no-repeat;
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-  border-radius: 4px;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-  transition: background 2s, transform 2s;
-  &:hover {
-    background: linear-gradient(0deg, $black_65, $black_10 30%), $black_55;
-  }
-  a h2 {
-    font-size: 32px;
-    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-    transition: font-size .4s;
-    margin-bottom: 0;
-    &:hover {
-      font-size: 34px;
-    }
-  }
-}
-.slider-trailer {
-  position: absolute;
-  bottom: 1%;
-  right: 5%;
-  h2 {
-    color: $white;
-    letter-spacing: -1px;
-  }
-  .glyphicon {
-    padding-left: 2px;
-  }
-}
-.slider-thumbnail {
-  position: relative;
-  width: 100%;
-  height: auto;
-  display: block;
-  z-index: -1;
-}
-#info-buttons {
-  position: absolute;
-  right: 0;
-  bottom: 2%;
-  font-family: $font_5, $font_6, $font_7, $font_8;
-}
-.info-modal-body {
-  padding-top: 0;
-  h3 {
-    font-weight: 700;
-    small {
-      font-size: 80%;
-    }
-  }
+    color: #171717;
+    text-shadow: 1px 1px #f6f6f6,
+                             3px 3px rgba(0, 0, 0, .18);
+    margin: 15px auto 0px;
 }
 .ui-widget-header {
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-bottom-width: 3px;
-  //Instead of the line below you could use @include border-bottom-right-radius($radius)
-  border-bottom-right-radius: none;
-  //Instead of the line below you could use @include border-bottom-left-radius($radius)
-  border-bottom-left-radius: none;
-  background: none;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom-width: 3px;
+    border-bottom-right-radius: none;
+    border-bottom-left-radius: none;
+    background: none;
 }
 .ui-widget-content {
-  border-color: $color_alto_approx;
-  border-style: solid;
-  border-width: 1px;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 1px 2px $black_5;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
 }
-#v8-showtimes {
-  h3 {
+#v8-showtimes h3, #ba-showtimes h3 {
     margin: 0 auto;
-  }
-  div h3 {
-    small {
-      padding-bottom: 40px;
+}
+#v8-showtimes div h3 small {
+    padding-bottom: 40px;
+    &::after {
+        content: " )
+        display: table;
+        clear: both;
     }
-    small::after {
-      content: " ";
-      display: table;
-      clear: both;
-    }
-  }
+}
+#tabs h3 > small {
+    padding-left: 10px;
 }
 dd {
-  font-size: 85%;
-  text-align: center;
+    font-size: 85%;
 }
-dt {
-  text-align: center;
+dt, dd {
+    text-align: center;
+}
+.media-left a img {
+    width: auto;
+    height: 180px;
+}
+.media:first-child {
+    margin-top: 15px;
 }
 .app-links {
-  font-size: 24px;
+    font-size: 24px;
 }
 .social-links {
-  font-size: 16px;
+    font-size: 16px;
 }
 i {
-  padding-right: 10px;
+    padding-right: 10px;
 }
-@media(min-width: 60px) {
-  .navbar-brand {
+media (min-width: 60px) {
     padding-left: 2%;
-  }
-  .navbar-header {
-    height: 60px;
-  }
-  #v8-showtimes div h3 small::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .ui-accordion .ui-accordion-content {
-    padding-bottom: 0;
-  }
 }
-@media(min-width: 366px) {
-  .navbar-toggle {
+.ui-accordion .ui-accordion-content {
+    padding-bottom: 0;
+}
+.navbar-header {
+    height: 60px;
+}
+media (min-width: 366px) {
     margin-top: 13px;
     margin-bottom: 13px;
-  }
-  .panel-title {
-    font-size: 1.5em;
-  }
-  .navbar-inverse {
-    background-image: linear-gradient(to bottom,$color_storm_dust_approx 0,$color_gravel_approx 100%);
-  }
-  .slider-desc.panel {
-    height: 100%;
-  }
-  .slider-img-thumb a h2 {
-    font-size: 24px;
-    &:hover {
-      font-size: 26px;
-    }
-  }
-  .ui-accordion .ui-accordion-content {
-    padding-bottom: 0;
-  }
 }
-@media(min-width: 700px) {
-  #v8-showtimes div h3 small::after {
+.panel-title {
+    font-size: 1.5em;
+}
+.navbar-inverse {
+    background-image: -webkit-linear-gradient(top,#666 0,#4c4c4c 100%);
+    background-image: -o-linear-gradient(top,#666 0,#4c4c4c 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#666),to(#4c4c4c));
+    background-image: linear-gradient(to bottom,#666 0,#4c4c4c 100%);
+}
+.slider-desc.panel {
+    height: 100%;
+}
+.ui-accordion .ui-accordion-content {
+    padding-bottom: 0;
+}
+media (min-width: 700px) {
     content: none;
     display: inherit;
     clear: none;
-  }
-  .ui-accordion .ui-accordion-content {
-    padding-bottom: 21px;
-  }
 }
-@media(min-width: 768px) {
-  div {
-    &.panel-body {
-      padding: 8px 12px;
-    }
-    &.slider-nav > div > .slick-track {
-      height: 180px;
-    }
-  }
-  .navbar-header {
+.ui-accordion .ui-accordion-content {
+    padding-bottom: 21px;
+}
+media (min-width: 768px) {
+    height: 180px;
+}
+.navbar-header {
     height: 40px;
-  }
-  .slider-desc {
-    &.panel {
-      height: auto;
-    }
-    div > h4 {
-      font-size: 17px;
-      margin-top: 4px;
-      margin-bottom: 4px;
-    }
-  }
-  .slider-img {
+}
+.slider-desc.panel {
+    height: auto;
+}
+.slider-desc div > h4 {
+    font-size: 17px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.slider-img {
     width: 84%;
     margin: 0 auto 20px;
-    padding-left: 0;
+    padding-left: 0px;
     border: 1px solid transparent;
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 4px;
-    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    box-shadow: 0 1px 2px $black_5;
-  }
-  .navbar-inverse {
-    background-image: linear-gradient(to bottom,$color_masala_approx 0,$color_log_cabin_approx 100%);
-  }
-  #info-buttons {
-    left: 88%;
-  }
-  .main-header div > h2 {
-    font-size: 26px;
-  }
-  .slick-prev:before {
-    display: none;
-  }
-  .slick-next:before {
-    display: none;
-  }
-  .slider-img-thumb a h2 {
-    font-size: 32px;
-    &:hover {
-      font-size: 34px;
-    }
-  }
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
 }
-@media(min-width: 992px) {
-  div {
-    &.panel-body {
-      padding-left: 7px;
-      padding-right: 7px;
-    }
-    &.slider-nav > div > .slick-track {
-      height: 244px;
-    }
-  }
-  .slider-desc {
+div.panel-body {
+    padding: 8px 12px;
+}
+.navbar-inverse {
+    background-image: -webkit-linear-gradient(top,#3c3c3c 0,#222 100%);
+    background-image: -o-linear-gradient(top,#3c3c3c 0,#222 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#222));
+    background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+}
+#info-buttons {
+    left: 88%;
+}
+media (min-width: 992px) {
+    height: 244px;
+}
+.slider-desc.panel {
+    height: 271px;
+}
+.slider-desc div > h4 {
+    font-size: 15.5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.slider-desc {
     width: 480px;
     margin-left: 5px;
     &.panel {
-      height: 271px;
+        height: 326px;
     }
     div > h4 {
-      font-size: 15.5px;
-      margin-top: 7px;
-      margin-bottom: 7px;
+        font-size: 18px;
+        margin-top: 9px;
+        margin-bottom: 9px;
     }
-  }
-  .slider-img {
+}
+.slider-img {
     padding-right: 0;
     width: 480px;
     margin-right: 5px;
-  }
-  #info-buttons {
-    left: 81%;
-  }
-  .main-header div > h2 {
-    font-size: 30px;
-  }
 }
-@media(min-width: 1200px) {
-  .slider-desc {
+div.panel-body {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+#info-buttons {
+    left: 81%;
+}
+media (min-width: 1200px) {
+    height: 304px;
+}
+.slick-slide img {
+    border-right-width: 6px;
+}
+.slider-desc {
     width: 578px;
     margin-left: 6px;
-    &.panel {
-      height: 326px;
-    }
-    div > h4 {
-      font-size: 18px;
-      margin-top: 9px;
-      margin-bottom: 9px;
-    }
-  }
-  .slider-img {
+}
+.slider-img {
     width: 578px;
     margin-right: 6px;
-  }
-  #info-buttons {
+}
+#info-buttons {
     left: 84%;
-  }
-  div.slider-nav > div > .slick-track {
-    height: 304px;
-  }
-  .slick-slide img {
-    border-right-width: 6px;
-  }
-}
-a:focus {
-  outline: none;
-}
-.nav li a {
-  color: $color_mine_shaft_approx;
-  font-size: 1.3em;
-  letter-spacing: 1.1px;
-}
-.row.slick-slide.slick-active::after {
-  content: "Showtimes and Pricing";
-  text-align: center;
-  font-weight: 200;
-  font-size: 4em;
-  color: $color_hunter_green_approx;
-  //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  text-shadow: 1px 1px $color_black_haze_approx, 3px 3px $black_18;
-  margin: 15px auto 0;
-}
-#ba-showtimes h3 {
-  margin: 0 auto;
-}
-#tabs h3 > small {
-  padding-left: 10px;
 }

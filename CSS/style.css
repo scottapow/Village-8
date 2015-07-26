@@ -328,9 +328,14 @@ dt, dd {
 	text-align: center;
 }
 
+.media-left a img {
+	width: auto;
+	height: 180px;
+}
 
-/*//////////FOOTER//////////*/
-
+.media:first-child {
+	margin-top: 15px;
+}
 
 .app-links {
 	font-size: 24px;
@@ -382,10 +387,10 @@ i {
 		height: 100%;
 	}
 	.slider-img-thumb a h2 {
-	font-size: 24px;
+		font-size: 24px;
 	}
 	.slider-img-thumb a h2:hover {
-	font-size: 26px;
+		font-size: 26px;
 	}
 	.ui-accordion .ui-accordion-content {
 		padding-bottom: 0;
@@ -394,9 +399,9 @@ i {
 
 @media (min-width: 700px) {
 	#v8-showtimes div h3 small::after {
-	content: none;
-	display: inherit;
-	clear: none;
+		content: none;
+		display: inherit;
+		clear: none;
 	}
 	.ui-accordion .ui-accordion-content {
 		padding-bottom: 21px;
@@ -442,10 +447,10 @@ i {
   	background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
 	}
 	.slider-img-thumb a h2 {
-	font-size: 32px;
+		font-size: 32px;
 	}
 	.slider-img-thumb a h2:hover {
-	font-size: 34px;
+		font-size: 34px;
 	}
 	#info-buttons {
 		left: 88%;
