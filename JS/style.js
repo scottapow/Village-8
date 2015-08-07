@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 /* * * * * Slick Carousel * * * * */
 
   $('.slider-nav').slick({
@@ -110,9 +117,9 @@
         var releaseDate = rdMonth + " " + rdDay;
         var rating = response.rating;
         var year = response.year;
-/* * * * * Multiple Writers Fix * * * * */
+  /* * * * * Multiple Writers Fix * * * * */
         if (response.writers.length === 2) {
-/* * * * * Content Concatenation * * * * */
+  /* * * * * Content Concatenation * * * * */
           responseContent = ("<h3>Director:<small>&nbsp; "
                             +directors+
                             "</small></h3><h3>Writers:<small>&nbsp; "
@@ -198,14 +205,12 @@ $(document).ready(function(){
       $('#mediaModal').modal();
     }
   });
-   
-  // Clear modal contents on close. 
-  // There was mention of videos that kept playing in the background.
   $('#mediaModal').on('hidden.bs.modal', function () {
     $('#mediaModal .modal-body').html('');
   });
 
 });    
+
 /* * * * * jQueryUI tabs and accordion initialization * * * * */
 
   $( "#v8-showtimes" ).accordion();
